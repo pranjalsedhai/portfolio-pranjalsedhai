@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Pranjal Sedhai</title>
+    <title>Portfolio – Pranjal Sedhai</title>
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
 
 <header>
@@ -20,44 +22,68 @@
     </ul>
 </nav>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate cybersecurity enthusiast with a strong interest in ethical hacking, web application security, and penetration testing. I enjoy exploring vulnerabilities, learning advanced exploitation techniques, and participating in CTF challenges to sharpen my skills. My goal is to combine technical expertise with problem-solving to make digital environments safer and to continuously grow as a security professional.</p>
-</section>
+<section id="about" class="about-section">
+    <div class="about-container">
+        <img src="images/image1.jpg" alt="Profile Photo" class="about-photo">
 
-<section><img src="images/image1.png"></section>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+                I am deeply interested in cybersecurity, ethical hacking, and web application 
+                security. I practice on PortSwigger, HackTheBox, and TryHackMe to build skills 
+                and understand modern attack techniques. I enjoy CTFs, breaking down 
+                vulnerabilities, and learning advanced exploitation methods.
+            </p>
+        </div>
+    </div>
+</section>
 
 <section id="projects">
     <h2>Projects</h2>
 
     <div class="project">
+        <h3>Portfolio Website</h3>
+        <img src="images/portfolio.png" alt="Portfolio Project" class="project-image">
+        <p>This is my personal portfolio website showcasing my skills, projects, and experience. 
+        Built with HTML, and CSS, it demonstrates responsive design and modern layout techniques.</p>
+    </div>
+
+    <div class="project">
         <h3>Tic Tac Toe (Python)</h3>
-        <p>A classic two player Tic Tac Toe game implemented in Python. Players take turns marking X and O in a command-line interface. The game includes logic to check for winning conditions, detect draws, and ensure valid moves, demonstrating fundamental programming concepts such as loops, conditionals, and functions.</p>
+        <p>A simple two-player Tic Tac Toe game built using Python. The application 
+        checks win conditions, validates turns, and displays the board clearly in the 
+        terminal.</p>
     </div>
 
     <div class="project">
         <h3>Weather App</h3>
-        <p>A dynamic web application that allows users to check the weather for any city. Built with PHP and MySQL for backend data management, and HTML, CSS, and JavaScript for a responsive frontend. Users can input a city name to retrieve real time weather data, and the app stores search history in the database. This project showcases full-stack development, API integration, and interactive web design.</p>
+        <p>A web application that retrieves weather information for any city. 
+        Built using PHP, MySQL, and JavaScript. It stores search history and shows 
+        results in a clean layout.</p>
     </div>
-
 </section>
-
 
 <section id="contact">
     <h2>Contact</h2>
+
+    <!-- small accessibility improvement: labels properly connected -->
     <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Send</button>
     </form>
 </section>
 
+
+<footer>
+    <p>&copy; <span id="year"></span> Pranjal Sedhai. All rights reserved.</p>
+</footer>
 </body>
 </html>
