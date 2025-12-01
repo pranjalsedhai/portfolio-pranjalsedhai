@@ -3,67 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Pranjal Sedhai</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Portfolio - Pranjal Sedhai</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>Pranjal Sedhai</h1>
+<!-- header section of the page -->
+<header id="hero">
+    <video autoplay loop muted id="video-background">
+        <source src="videos/hacker_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <nav class="navbar">
+        <span class="logo">Pranjal Sedhai</span>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">☰</button>
+    </nav>
+
 </header>
 
-<nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
+<!-- about section -->
 <section id="about" class="about-section">
-    <div class="about-container">
-        <img src="images/image1.jpg" alt="Profile Photo" class="about-photo">
-
-        <div class="about-text">
-            <h2>About Me</h2>
+    <h2>About Me</h2>
+    <figure class="about-profile">
+        <img src="images/image1.jpg" alt="Pranjal Sedhai" class="about-photo">
+        <figcaption>
             <p>
-                I am deeply interested in cybersecurity, ethical hacking, and web application security. I practice on PortSwigger, HackTheBox, and TryHackMe to build skills and understand modern attack techniques. I enjoy CTFs, breaking down 
-                vulnerabilities, and learning advanced exploitation methods.
+                I am deeply interested in cybersecurity, ethical hacking, and web application security. 
+                I practice on PortSwigger, HackTheBox, and TryHackMe to build skills and understand modern attack techniques. 
+                I enjoy CTFs, breaking down vulnerabilities, and learning advanced exploitation methods.
             </p>
-        </div>
-    </div>
+        </figcaption>
+    </figure>
 </section>
 
-<section id="projects">
+<!-- skills section -->
+<section id="skills" class="skills-section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li>Network Pentesting</li>
+        <li>Web Application Pentesting</li>
+        <li>HTML / CSS / JS</li>
+        <li>Python & Bash Scripting</li>
+    </ul>
+</section>
+
+<!-- projects section -->
+<section id="projects" class="projects-section">
     <h2>Projects</h2>
-
-    <div class="project">
+    <article class="project-card">
         <h3>Portfolio Website</h3>
-        <img src="images/portfolio.png" alt="Portfolio Project" class="project-image">
-        <p>This is my personal portfolio website showcasing my skills, projects, and experience. 
-        Built with HTML, and CSS, it demonstrates responsive design and modern layout techniques.</p>
-    </div>
+        <p>My personal portfolio website showcasing my skills, projects, and experience. Built with HTML, CSS, and JavaScript, demonstrating responsive design and modern layout techniques.</p>
+    </article>
 
-    <div class="project">
+    <article class="project-card">
         <h3>Tic Tac Toe (Python)</h3>
-        <p>A simple two-player Tic Tac Toe game built using Python. The application 
-        checks win conditions, validates turns, and displays the board clearly in the 
-        terminal.</p>
-    </div>
+        <p>A simple two-player Tic Tac Toe game built using Python. The application checks win conditions, validates turns, and displays the board clearly in the terminal.</p>
+    </article>
 
-    <div class="project">
+    <article class="project-card">
         <h3>Weather App</h3>
-        <p>A web application that retrieves weather information for any city. 
-        Built using PHP, MySQL, and JavaScript. It stores search history and shows 
-        results in a clean layout.</p>
-    </div>
+        <p>A web application that retrieves weather information for any city. Built using PHP, MySQL, and JavaScript. It stores search history and shows results in a clean layout.</p>
+    </article>
+
+    <article class="project-card">
+        <h3>Blog: Finding an RCE on a Red Hat Associated Server</h3>
+        <p>A technical write‑up documenting how I discovered a remote command execution vulnerability on a 
+        Red Hat associated server. Covers methodology, request analysis, and secure reporting steps.</p>
+    </article>
 </section>
 
-<section id="contact">
+<!-- contact section -->
+<section id="contact" class="contact-section">
     <h2>Contact</h2>
-
-    <form action="#" method="">
+    <form id="contact-form">
         <label for="name">Name</label>
         <input id="name" name="name" type="text" required>
 
@@ -74,12 +93,14 @@
         <textarea id="message" name="message" required></textarea>
 
         <button type="submit">Send</button>
+        <div id="form-message"></div>
     </form>
 </section>
-
 
 <footer>
     <p>&copy; Pranjal Sedhai. All rights reserved.</p>
 </footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
