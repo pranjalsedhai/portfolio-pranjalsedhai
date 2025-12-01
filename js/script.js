@@ -1,4 +1,4 @@
-// ====== MOBILE MENU TOGGLE ======
+// mobile menu toggling
 const menuButton = document.getElementById('menu-button');
 const navLinks = document.querySelector('.nav-links');
 
@@ -20,7 +20,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 
-// ====== CONTACT FORM HANDLING ======
+// contact form message handling
 const form = document.getElementById('contact-form');
 const formMsg = document.getElementById('form-message');
 
